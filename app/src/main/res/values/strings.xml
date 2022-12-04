@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">sms</string>
+    <string name="setting">Настроить</string>
+    <string name="newValue">Новое значение</string>
+    <string name="noSetting">Настроки не заданы</string>
+</resources>
