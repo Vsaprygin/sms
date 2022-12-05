@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/timeMin"
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Период отправки в минутах"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/volumeMax"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Включить громкость 100%" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="167dp">
+
+            <RadioButton
+                android:id="@+id/anyPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="С любого номера" />
+
+            <RadioButton
+                android:id="@+id/fronContactPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Из контактов" />
+
+            <RadioButton
+                android:id="@+id/onlyPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="От указанного номера" />
+        </RadioGroup>
+        <EditText
+            android:id="@+id/onlyNumberPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="Номер с которого придет SMS"/>
+        <Button
+            android:id="@+id/saveAdvansed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Сохранить настройки" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
